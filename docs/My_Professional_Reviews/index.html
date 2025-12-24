@@ -246,6 +246,120 @@ section.level2 h2::after {
   margin: 2rem 0 1.5rem;
   font-size: 1.1rem;
 }
+
+/* Peer Assessment Section */
+.peer-assessment-section {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  border-left: 6px solid #4caf50;
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.2);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.peer-assessment-section h2 {
+  color: #2e7d32;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.peer-assessment-section h2::before {
+  content: '📊';
+  font-size: 2rem;
+}
+
+.spreadsheet-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.8rem;
+  background: white;
+  color: #2e7d32;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+  margin-top: 1rem;
+}
+
+.spreadsheet-link:hover {
+  background: #4caf50;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.spreadsheet-link::after {
+  content: '→';
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.spreadsheet-link:hover::after {
+  transform: translateX(5px);
+}
+
+/* Self Assessment Section */
+.self-assessment-section {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  border-left: 6px solid #2196f3;
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.2);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.self-assessment-section h2 {
+  color: #1565c0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.self-assessment-section h2::before {
+  content: '🤖';
+  font-size: 2rem;
+}
+
+.self-spreadsheet-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.8rem;
+  background: white;
+  color: #1565c0;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+  margin-top: 1rem;
+}
+
+.self-spreadsheet-link:hover {
+  background: #2196f3;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+}
+
+.self-spreadsheet-link::after {
+  content: '→';
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.self-spreadsheet-link:hover::after {
+  transform: translateX(5px);
+}
 </style>
 
 
@@ -443,6 +557,25 @@ section.level2 h2::after {
 
 </header>
 
+<section class="peer-assessment-section">
+<h2>Peer Assessment UAS</h2>
+<p style="color: #2e7d32; line-height: 1.7; margin-bottom: 1.5rem;">
+Klik tombol di bawah untuk melihat data Peer Assessment dalam Google Sheets:
+</p>
+<a href="https://docs.google.com/spreadsheets/d/1VsnD3PwLjSIpPFuYxlfj7l0eg45KasHBeyQVjo-lyqs/edit?gid=696035945#gid=696035945" target="_blank" class="spreadsheet-link">
+Lihat Peer Assessment Spreadsheet
+</a>
+</section>
+
+<section class="self-assessment-section">
+<h2>Penilaian Self Assessment dengan AI</h2>
+<p style="color: #1565c0; line-height: 1.7; margin-bottom: 1.5rem;">
+Klik tombol di bawah untuk melihat hasil Self Assessment yang dinilai dengan bantuan AI:
+</p>
+<a href="https://docs.google.com/spreadsheets/d/1F_zmqVB_010n0BoKKHt9KZLp9YRr8TDMsvmEfKIYBEM/edit?gid=696035945#gid=696035945" target="_blank" class="self-spreadsheet-link">
+Lihat Self Assessment dengan AI
+</a>
+</section>
 
 <section id="indeks-ketahanan-planet" class="level2">
 <h2 class="anchored">Indeks Ketahanan Planet (The Planetary Resilience Index)</h2>
