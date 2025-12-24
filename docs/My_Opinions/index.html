@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; UAS-3 My Opinions – Armein Z. R. Langi</title>
+<title>7&nbsp; UAS-3 My Opinions – Sebastian Enrico Nathanael</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,133 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+
+/* Interactive Opinion Styles */
+.opinion-intro {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #e67e22;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.critique-card {
+  padding: 1.8rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #c0392b;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.critique-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(192, 57, 43, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.critique-card:hover::before {
+  left: 100%;
+}
+
+.critique-card:hover {
+  transform: translateX(10px) translateY(-2px);
+  box-shadow: 0 8px 20px rgba(192, 57, 43, 0.2);
+  border-left-color: #922b21;
+  background: linear-gradient(135deg, #ffe5e5 0%, #fdd;
+}
+
+.critique-card h3 {
+  color: #c0392b;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.critique-card:hover h3 {
+  color: #922b21;
+}
+
+.stat-highlight {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: rgba(192, 57, 43, 0.1);
+  border-radius: 4px;
+  font-weight: 600;
+  color: #c0392b;
+  transition: all 0.3s ease;
+}
+
+.critique-card:hover .stat-highlight {
+  background: rgba(192, 57, 43, 0.2);
+  transform: scale(1.05);
+}
+
+section.level2 {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section.level2 h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section.level2 h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #e67e22 0%, #f39c12 100%);
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+.critique-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: #c0392b;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 </style>
 
@@ -100,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
       <a href="../index.html" class="sidebar-logo-link">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Armein Z. R. Langi</a> 
+      <a href="../">Sebastian Enrico Nathanael</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -218,7 +345,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Coming Soon...</p>
+<section id="kegagalan-desain-statis" class="level2">
+<h2 class="anchored">Kegagalan Desain Statis dan "Apartheid Atmosfer"</h2>
+
+<div class="opinion-intro">
+<p>Menurut pendapat saya, peradaban modern terjebak dalam <strong>delusi stabilitas</strong>. Kita membangun kota beton yang statis dan sistem pangan yang kaku, padahal data menunjukkan lebih dari separuh penduduk Bumi (<span class="stat-highlight">~4,5 miliar orang</span>) kini berisiko tinggi mengalami peristiwa cuaca ekstrem.</p>
+</div>
+
+<p>Opini saya berfokus pada dua kritik tajam:</p>
+
+<div class="critique-card">
+<h3><span class="critique-icon">!</span> <strong>Racun yang Kita Hirup</strong></h3>
+<p>Adalah sebuah <em>skandal peradaban</em> bahwa <span class="stat-highlight">99% populasi global</span> menghirup udara yang kualitasnya di bawah standar kesehatan WHO. Polusi udara ini, yang terkait erat dengan emisi penyebab perubahan iklim, telah membunuh <span class="stat-highlight">7 juta orang</span> sebelum waktunya setiap tahun. Kita telah menormalisasi keracunan massal.</p>
+</div>
+
+<div class="critique-card">
+<h3><span class="critique-icon">⚖</span> <strong>Ketidakadilan Struktural</strong></h3>
+<p>Negara kepulauan kecil dan komunitas miskin menanggung beban terberat kehancuran ini meskipun kontribusi emisi mereka sangat kecil. Ini adalah <em>kegagalan moral global</em> yang menuntut retribusi dalam bentuk transfer teknologi dan perlindungan infrastruktur.</p>
+</div>
+
+</section>
 
 
 </main> <!-- /main -->

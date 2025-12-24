@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; UAS-5 My Professional Reviews – Armein Z. R. Langi</title>
+<title>10&nbsp; UAS-5 My Professional Reviews – Sebastian Enrico Nathanael</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,232 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+
+/* Professional Review Styles */
+.review-intro {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+  border-radius: 12px;
+  margin: 2rem 0;
+  border-left: 6px solid #3f51b5;
+  animation: fadeInUp 0.6s ease-out;
+  box-shadow: 0 6px 16px rgba(63, 81, 181, 0.2);
+  position: relative;
+}
+
+.review-intro::before {
+  content: '📊';
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 3.5rem;
+  opacity: 0.12;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.metric-card {
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #3f51b5;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3f51b5 0%, #5c6bc0 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+}
+
+.metric-card:hover::before {
+  transform: scaleX(1);
+}
+
+.metric-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(63, 81, 181, 0.25);
+  border-top-color: #283593;
+}
+
+.metric-card:nth-child(1) { border-top-color: #1e88e5; }
+.metric-card:nth-child(2) { border-top-color: #43a047; }
+.metric-card:nth-child(3) { border-top-color: #fb8c00; }
+.metric-card:nth-child(4) { border-top-color: #e53935; }
+
+.metric-card:nth-child(1):hover { border-top-color: #1565c0; }
+.metric-card:nth-child(2):hover { border-top-color: #2e7d32; }
+.metric-card:nth-child(3):hover { border-top-color: #e65100; }
+.metric-card:nth-child(4):hover { border-top-color: #c62828; }
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.metric-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #3f51b5 0%, #5c6bc0 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.3);
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover .metric-icon {
+  transform: rotateY(360deg) scale(1.1);
+  box-shadow: 0 6px 16px rgba(63, 81, 181, 0.4);
+}
+
+.metric-card:nth-child(1) .metric-icon { background: linear-gradient(135deg, #1e88e5 0%, #42a5f5 100%); }
+.metric-card:nth-child(2) .metric-icon { background: linear-gradient(135deg, #43a047 0%, #66bb6a 100%); }
+.metric-card:nth-child(3) .metric-icon { background: linear-gradient(135deg, #fb8c00 0%, #ffa726 100%); }
+.metric-card:nth-child(4) .metric-icon { background: linear-gradient(135deg, #e53935 0%, #ef5350 100%); }
+
+.metric-title {
+  flex: 1;
+  color: #1a237e;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.metric-description {
+  color: #546e7a;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.metric-card:hover .metric-description {
+  color: #37474f;
+}
+
+.progress-indicator {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #757575;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3f51b5 0%, #5c6bc0 100%);
+  border-radius: 3px;
+  transition: width 1s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.metric-card:nth-child(1) .progress-fill { background: linear-gradient(90deg, #1e88e5 0%, #42a5f5 100%); }
+.metric-card:nth-child(2) .progress-fill { background: linear-gradient(90deg, #43a047 0%, #66bb6a 100%); }
+.metric-card:nth-child(3) .progress-fill { background: linear-gradient(90deg, #fb8c00 0%, #ffa726 100%); }
+.metric-card:nth-child(4) .progress-fill { background: linear-gradient(90deg, #e53935 0%, #ef5350 100%); }
+
+section.level2 {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section.level2 h2 {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: #1a237e;
+  font-size: 2rem;
+}
+
+section.level2 h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #3f51b5 0%, #5c6bc0 100%);
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+.rubric-intro {
+  text-align: center;
+  font-weight: 600;
+  color: #3f51b5;
+  margin: 2rem 0 1.5rem;
+  font-size: 1.1rem;
 }
 </style>
 
@@ -100,7 +326,7 @@ ul.task-list li input[type="checkbox"] {
       <a href="../index.html" class="sidebar-logo-link">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Armein Z. R. Langi</a> 
+      <a href="../">Sebastian Enrico Nathanael</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -155,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../My_Opinions/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">UAS-3 My Opinions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">UAS-2 My Opinions</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -218,7 +444,88 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Coming Soon...</p>
+<section id="indeks-ketahanan-planet" class="level2">
+<h2 class="anchored">Indeks Ketahanan Planet (The Planetary Resilience Index)</h2>
+
+<div class="review-intro">
+<p>Sebagai standar evaluasi profesional, <strong>PDB (Produk Domestik Bruto)</strong> sudah usang. Saya mengusulkan kerangka penilaian baru untuk mengaudit keberhasilan negara atau organisasi, yang saya sebut <strong>Indeks Ketahanan Planet</strong>.</p>
+</div>
+
+<p class="rubric-intro">📋 Rubrik penilaian ini didasarkan pada data target global:</p>
+
+<div class="metrics-grid">
+
+<div class="metric-card">
+<div class="metric-header">
+<div class="metric-icon">🛡️</div>
+<h3 class="metric-title">Skor Perlindungan Populasi</h3>
+</div>
+<p class="metric-description">Seberapa efektif sistem melindungi <strong>3,6 miliar orang</strong> di zona rentan?</p>
+<div class="progress-indicator">
+<div class="progress-label">
+<span>Target Progress</span>
+<span>45%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-header">
+<div class="metric-icon">🌬️</div>
+<h3 class="metric-title">Metrik Udara Bersih</h3>
+</div>
+<p class="metric-description">Apakah kita berhasil menurunkan persentase populasi yang terpapar udara buruk dari angka <strong>99%</strong>?</p>
+<div class="progress-indicator">
+<div class="progress-label">
+<span>Air Quality Index</span>
+<span>1%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 1%;"></div>
+</div>
+</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-header">
+<div class="metric-icon">🌾</div>
+<h3 class="metric-title">Stabilitas Pangan</h3>
+</div>
+<p class="metric-description">Apakah intervensi berhasil menurunkan angka kelaparan global yang kini mencapai <strong>9% populasi</strong>?</p>
+<div class="progress-indicator">
+<div class="progress-label">
+<span>Food Security</span>
+<span>91%</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 91%;"></div>
+</div>
+</div>
+</div>
+
+<div class="metric-card">
+<div class="metric-header">
+<div class="metric-icon">🌡️</div>
+<h3 class="metric-title">Kepatuhan Ambang Batas</h3>
+</div>
+<p class="metric-description">Seberapa dekat kita menekan laju pemanasan global di bawah <strong>1,5-2 derajat Celcius</strong> sesuai Perjanjian Paris?</p>
+<div class="progress-indicator">
+<div class="progress-label">
+<span>Climate Target</span>
+<span>~1.5°C</span>
+</div>
+<div class="progress-bar">
+<div class="progress-fill" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
 
 
 
